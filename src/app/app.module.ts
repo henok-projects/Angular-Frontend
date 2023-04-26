@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,8 +32,6 @@ import { LeaderService } from './service/leader/leader.service';
 import { PromotionService } from './service/promotion/promotion.service';
 import { LoginComponent } from './component/login/login.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,7 @@ import { LoginComponent } from './component/login/login.component';
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,17 +60,12 @@ import { LoginComponent } from './component/login/login.component';
     MatCheckboxModule,
     MatSelectModule,
     MatSlideToggleModule,
+    MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
-
-
-
-
-
-
   ],
-  providers: [DishService,PromotionService,LeaderService],
-  entryComponents:[LoginComponent],
-  bootstrap: [AppComponent]
+  providers: [DishService, PromotionService, LeaderService],
+  entryComponents: [LoginComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

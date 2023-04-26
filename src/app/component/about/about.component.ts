@@ -11,8 +11,8 @@ import { LEADERS } from 'src/app/shared/leaders';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  leader!: Leader[];
-  lead = LEADERS;
+  leaders!: Leader[];
+  //lead = LEADERS;
   constructor(
     private leaderService: LeaderService,
     private route: ActivatedRoute,
@@ -20,8 +20,8 @@ export class AboutComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.leaderService.getLeaders().then((leader) => {
-      this.leader = leader;
+    this.leaderService.getLeaders().then((leaders) => {
+      this.leaders = leaders;
     });
   }
 }
